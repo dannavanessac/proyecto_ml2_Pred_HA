@@ -183,5 +183,7 @@ def generate_ensin_calibrated_cohort(n_samples=10000, random_state=42, output_pa
     return df
 
 if __name__ == "__main__":
+    # Las rutas del proyecto son relativas a la raíz: se ejecuta igual desde cualquier carpeta
+    os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
     fetch_real_colombian_reference()
     generate_ensin_calibrated_cohort()
