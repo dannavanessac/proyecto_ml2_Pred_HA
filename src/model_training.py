@@ -320,4 +320,6 @@ def run_full_modeling_pipeline():
     return summary_df
 
 if __name__ == "__main__":
+    # Las rutas del proyecto son relativas a la raíz: se ejecuta igual desde cualquier carpeta
+    os.chdir(project_root)
     run_full_modeling_pipeline()
