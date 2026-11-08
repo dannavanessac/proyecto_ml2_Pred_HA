@@ -1,0 +1,7 @@
+Variable,Categorías,Chi2,p-valor,Odds Ratio (estimado)
+sexo,"['Femenino', 'Masculino']",36.79,1.31e-09,1.35
+tabaquismo,"['No', 'Si']",11.61,6.55e-04,1.28
+actividad_fisica,"['Activo', 'Sedentario']",82.97,8.35e-20,1.57
+diabetes,"['No', 'Si']",325.52,9.09e-73,3.39
+zona_residencia,"['Rural', 'Urbana']",0.81,3.67e-01,0.95
+regimen_salud,"['Contributivo', 'Especial', 'Subsidiado']",2.42,2.98e-01,N/A
