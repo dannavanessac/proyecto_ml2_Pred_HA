@@ -1,7 +1,17 @@
-import joblib, pprint, json
-path = r'C:/Users/ANDRES CABALLERO/Documents/Entrega Final Proyecto ML2/proyecto_repo/proyectoml2-prediccion-HA-main/models/mejor_modelo_hipertension.joblib'
-pipeline = joblib.load(path)
-print('Pipeline steps:', list(pipeline.named_steps.keys()))
-# Show model type
-model = pipeline.named_steps.get('model')
-print('Model object:', model)
+"""
+src/inspect_pipeline.py
+Utilidad para inspeccionar el pipeline guardado en models/mejor_modelo_hipertension.joblib:
+pasos, modelo final y variables de entrada que espera.
+Uso (desde cualquier carpeta):  python src/inspect_pipeline.py
+"""
+from pathlib import Path
+ 
+import joblib
+ 
+ROOT = Path(__file__).resolve().parents[1]
+MODEL_PATH = ROOT / "models" / "mejor_modelo_hipertension.joblib"
+ 
+pipeline = joblib.load(MODEL_PATH)
+print("Pasos del pipeline:", list(pipeline.named_steps.keys()))
+print("Modelo final:", pipeline.named_steps["classifier"])
+print("Variables de entrada:", list(pipeline.feature_names_in_))
