@@ -293,4 +293,6 @@ def run_deep_eda(data_path="data/processed/dataset_hipertension_colombia.csv", f
     print("="*70)
 
 if __name__ == "__main__":
+    # Las rutas del proyecto son relativas a la raíz: se ejecuta igual desde cualquier carpeta
+    os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
     run_deep_eda()
